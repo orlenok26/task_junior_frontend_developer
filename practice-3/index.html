@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Практика (задание 2)</title>
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="style.css">
+        <script defer src="main.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <label for="search-text" class="label-search">Поиск по таблице:</label>
+            <input class="search" type="text" placeholder="Поиск" id="search-text" onkeyup="if (this.value.length >= 3) tableSearch();">
+            <button class="search-btn" type="button">Новый поиск</button>
+            <p class="alarm">При повторном поиске нажмите "Новый поиск"</p>
+            <p class="error">По вашему запросу ничего не найдено, нажмите "Новый поиск" и введите запрос</p>
+            <table class="table" id="table">
+                <tr>
+                    <th class="header__btn" onclick="sortTable(0, 'number')">
+                        UserID
+                    </th>
+                    <th class="header__btn" onclick="sortTable(1, 'number')">
+                        ID
+                    </th>
+                    <th class="header__btn"  onclick="sortTable(2, 'string')">
+                        Title
+                    </th>
+                    <th class="header__btn"  onclick="sortTable(3, 'string')">
+                        Body
+                    </th>
+                </tr>
+            </table>
+        </div>
+    
+</body>
+</html>
